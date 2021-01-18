@@ -105,7 +105,12 @@ currentViewController:(UIViewController *)currentViewController
 
 - (void)sendRequestCompletedMessage
 {
-    if (self.error == nil) 
+    if (self.error == nil && _status != AuthCompleted)
+    {
+        [self authDialogCanceled];
+        [self sendRequestCompletedMessage];
+    }
+    else if (self.error == nil)
     {
         if ([_delegate respondsToSelector:@selector(authCompleted:session:userState:)]) 
         {
