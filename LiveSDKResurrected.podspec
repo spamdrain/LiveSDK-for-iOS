@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
-  s.name         = "LiveSDK"
-  s.version      = "5.6.2"
+  s.name         = "LiveSDKResurrected"
+  s.version      = "5.7.0"
   s.summary      = "Client libraries for calling Live Services from iOS apps"
   s.description  = <<-DESC
                    Client libraries for calling the Live Services from iOS apps. Provides
@@ -13,10 +13,11 @@ Pod::Spec.new do |s|
   s.author             = { "onedriveapi" => "onedriveapi@microsoft.com" }
   s.social_media_url   = "http://twitter.com/onedrivedev"
 
-  s.ios.deployment_target = "5.1.1"
+  s.module_name  = "LiveSDK"
+  s.ios.deployment_target = "11.0"
   s.compiler_flags = "-DNS_BLOCK_ASSERTIONS=1"
 
-  s.source       = { :git => "https://github.com/liveservices/LiveSDK-for-iOS.git",
+  s.source       = { :git => "https://github.com/spamdrain/LiveSDK-for-iOS.git",
                      :tag => "#{s.version}" }
 
   s.source_files  = "src/LiveSDK/**/*.{h,m}"
