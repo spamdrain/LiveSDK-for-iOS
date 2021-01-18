@@ -38,15 +38,12 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
 
 + (NSBundle *) getSDKBundle
 {
-    NSString *sdkPath = [[NSBundle mainBundle] pathForResource:@"LiveSDK"
-                                                        ofType:@"framework"];
-    return (sdkPath)? [NSBundle bundleWithPath:sdkPath] : [NSBundle mainBundle];
+    return [NSBundle bundleForClass:[LiveAuthHelper class]];
 }
 
 + (UIImage *) getBackButtonImage
 {
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"LiveSDK.framework/Resources/backArrow_black"
-                                                      ofType:@"png"];
+    NSString * path = [[self getSDKBundle] pathForResource:@"backArrow_black" ofType:@"png"];
     if (path) {
         return [UIImage imageWithContentsOfFile:path];
     }
