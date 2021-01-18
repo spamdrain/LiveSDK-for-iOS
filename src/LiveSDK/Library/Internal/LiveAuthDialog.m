@@ -74,7 +74,7 @@
 {
     [super viewDidLoad];
     
-    self.webView.delegate = self;
+    self.webView.navigationDelegate = self;
     
     // Override the left button to show a back button
     // which is used to dismiss the modal view    
@@ -136,28 +136,21 @@
     [_delegate authDialogCanceled];
 }
 
-#pragma mark UIWebViewDelegate methods
+#pragma mark WKNavigationDelegate methods
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request 
- navigationType:(UIWebViewNavigationType)navigationType 
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    NSURL *url = [request URL];
-    
-    if ([[url absoluteString] hasPrefix: _endUrl]) 
+    NSURL *url = [navigationAction.request URL];
+
+    if ([[url absoluteString] hasPrefix: _endUrl])
     {
         [_delegate authDialogCompletedWithResponse:url];
     }
     
-    // Always return YES to work around an issue on iOS 6 that returning NO may cause
-    // next Login request on UIWebView to hang.
-    return YES;
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView 
-{
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error 
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
     // Ignore the error triggered by page reload
     if ([error.domain isEqualToString:@"NSURLErrorDomain"] && error.code == -999)
@@ -168,11 +161,6 @@
         return;
     
     [_delegate authDialogFailedWithError:error];
-}
-
-
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
 }
 
 @end

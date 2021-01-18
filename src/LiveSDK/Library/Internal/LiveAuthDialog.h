@@ -25,9 +25,10 @@
 
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import "LiveAuthDialogDelegate.h"
 
-@interface LiveAuthDialog : UIViewController<UIWebViewDelegate>
+@interface LiveAuthDialog : UIViewController<WKNavigationDelegate>
 {
 @private
     NSURL *_startUrl;
@@ -41,7 +42,7 @@
              delegate:(id<LiveAuthDialogDelegate>)delegate;
 
 @property (assign, nonatomic) id<LiveAuthDialogDelegate> delegate;
-@property (retain, nonatomic) IBOutlet UIWebView *webView;
+@property (retain, nonatomic) IBOutlet WKWebView *webView;
 @property (readonly, nonatomic) BOOL canDismiss;
 
 @end
