@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.exclude_files = "src/UnitTests/**", "Examples/**"
   s.public_header_files = "src/LiveSDK/Library/Public/*.h"
 
+  s.framework = "WebKit"
   s.resources = "src/LiveSDK/Library/Internal/Resources/*.png",
   				"src/LiveSDK/Library/Internal/*.xib"
   s.requires_arc = false

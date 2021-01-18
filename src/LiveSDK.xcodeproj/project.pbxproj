@@ -97,6 +97,7 @@
 		52C47514149B38D1007E646F /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
 		52C47515149B38D1007E646F /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
 		52C47518149B390F007E646F /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; };
+		8579190825B5E7C500FAE1D1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8579190725B5E7C500FAE1D1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +190,7 @@
 		52F76E8F147A308500DA0A46 /* LiveApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveApiHelper.h; path = LiveSDK/Library/Internal/Helpers/LiveApiHelper.h; sourceTree = SOURCE_ROOT; };
 		52F76E90147A308500DA0A46 /* LiveApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveApiHelper.m; path = LiveSDK/Library/Internal/Helpers/LiveApiHelper.m; sourceTree = SOURCE_ROOT; };
 		52F76E94147A3FA500DA0A46 /* LiveAuthDialog_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LiveAuthDialog_iPad.xib; path = Library/Internal/LiveAuthDialog_iPad.xib; sourceTree = "<group>"; };
+		8579190725B5E7C500FAE1D1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8579190825B5E7C500FAE1D1 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +265,7 @@
 		5297DDDC145E102B005B463E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8579190725B5E7C500FAE1D1 /* WebKit.framework */,
 				5297DDDD145E102B005B463E /* UIKit.framework */,
 				5297DDDF145E102B005B463E /* Foundation.framework */,
 				5297DDE1145E102B005B463E /* CoreGraphics.framework */,
