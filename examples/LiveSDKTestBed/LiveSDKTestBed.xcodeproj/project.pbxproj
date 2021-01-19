@@ -25,7 +25,6 @@
 		1070EF021A5C6A3D00966311 /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070EED91A5C6A3D00966311 /* LiveDownloadOperationCore.m */; };
 		1070EF031A5C6A3D00966311 /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070EEDC1A5C6A3D00966311 /* LiveOperationCore.m */; };
 		1070EF041A5C6A3D00966311 /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070EEDF1A5C6A3D00966311 /* LiveUploadOperationCore.m */; };
-		1070EF051A5C6A3D00966311 /* backArrow_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1070EEE11A5C6A3D00966311 /* backArrow_black.png */; };
 		1070EF061A5C6A3D00966311 /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070EEE51A5C6A3D00966311 /* LiveConnectClient.m */; };
 		1070EF071A5C6A3D00966311 /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070EEE71A5C6A3D00966311 /* LiveConnectSession.m */; };
 		1070EF081A5C6A3D00966311 /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070EEEA1A5C6A3D00966311 /* LiveDownloadOperation.m */; };
@@ -39,6 +38,7 @@
 		10ADE1C01A327C51003B79A3 /* LiveServiceViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 10ADE1B71A327C51003B79A3 /* LiveServiceViewController_iPhone.m */; };
 		10ADE1C11A327C51003B79A3 /* LiveServiceViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10ADE1B81A327C51003B79A3 /* LiveServiceViewController_iPhone.xib */; };
 		10ADE1C21A327C51003B79A3 /* volvo_c70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10ADE1BA1A327C51003B79A3 /* volvo_c70.jpg */; };
+		8579189825B57D6C00FAE1D1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8579189725B57D6C00FAE1D1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +81,6 @@
 		1070EEDD1A5C6A3D00966311 /* LiveOperationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOperationInternal.h; sourceTree = "<group>"; };
 		1070EEDE1A5C6A3D00966311 /* LiveUploadOperationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveUploadOperationCore.h; sourceTree = "<group>"; };
 		1070EEDF1A5C6A3D00966311 /* LiveUploadOperationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveUploadOperationCore.m; sourceTree = "<group>"; };
-		1070EEE11A5C6A3D00966311 /* backArrow_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow_black.png; sourceTree = "<group>"; };
 		1070EEE31A5C6A3D00966311 /* LiveAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthDelegate.h; sourceTree = "<group>"; };
 		1070EEE41A5C6A3D00966311 /* LiveConnectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectClient.h; sourceTree = "<group>"; };
 		1070EEE51A5C6A3D00966311 /* LiveConnectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveConnectClient.m; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		10ADE1B71A327C51003B79A3 /* LiveServiceViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveServiceViewController_iPhone.m; sourceTree = "<group>"; };
 		10ADE1B81A327C51003B79A3 /* LiveServiceViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveServiceViewController_iPhone.xib; sourceTree = "<group>"; };
 		10ADE1BA1A327C51003B79A3 /* volvo_c70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = volvo_c70.jpg; sourceTree = "<group>"; };
+		8579189725B57D6C00FAE1D1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8579189825B57D6C00FAE1D1 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +129,7 @@
 		02C4792B44EE2F8EE93DE814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8579189725B57D6C00FAE1D1 /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,7 +170,6 @@
 				1070EEDD1A5C6A3D00966311 /* LiveOperationInternal.h */,
 				1070EEDE1A5C6A3D00966311 /* LiveUploadOperationCore.h */,
 				1070EEDF1A5C6A3D00966311 /* LiveUploadOperationCore.m */,
-				1070EEE01A5C6A3D00966311 /* Resources */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -195,14 +196,6 @@
 				1070EEC91A5C6A3D00966311 /* UrlHelper.m */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		1070EEE01A5C6A3D00966311 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1070EEE11A5C6A3D00966311 /* backArrow_black.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		1070EEE21A5C6A3D00966311 /* Public */ = {
@@ -337,6 +330,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -355,7 +349,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1070EF051A5C6A3D00966311 /* backArrow_black.png in Resources */,
 				1070EEFD1A5C6A3D00966311 /* LiveAuthDialog_iPhone.xib in Resources */,
 				10ADE1BD1A327C51003B79A3 /* LiveServiceViewController_iPad.xib in Resources */,
 				10ADE1C11A327C51003B79A3 /* LiveServiceViewController_iPhone.xib in Resources */,
@@ -437,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -473,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = LiveSDKTestBed/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -499,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = LiveSDKTestBed/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
