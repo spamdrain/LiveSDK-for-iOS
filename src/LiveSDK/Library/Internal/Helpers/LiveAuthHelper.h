@@ -32,8 +32,6 @@
 
 + (NSBundle *) getSDKBundle;
 
-+ (UIImage *) getBackButtonImage;
-
 + (NSArray *) normalizeScopes:(NSArray *)scopes;
 
 + (BOOL) isScopes:(NSArray *)scopes1

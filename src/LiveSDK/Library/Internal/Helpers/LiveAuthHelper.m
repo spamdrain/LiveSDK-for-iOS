@@ -41,18 +41,6 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
     return [NSBundle bundleForClass:[LiveAuthHelper class]];
 }
 
-+ (UIImage *) getBackButtonImage
-{
-    NSString * path = [[self getSDKBundle] pathForResource:@"backArrow_black" ofType:@"png"];
-    if (path) {
-        return [UIImage imageWithContentsOfFile:path];
-    }
-    else
-    {
-        return [UIImage imageNamed:@"backArrow_black"];
-    }
-}
-
 + (NSArray *) normalizeScopes:(NSArray *)scopes
 {
     NSMutableArray *normalScopes = [NSMutableArray array];
