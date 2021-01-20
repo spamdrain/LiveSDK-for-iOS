@@ -36,7 +36,6 @@
 		10ADE1C01A327C51003B79A3 /* LiveServiceViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 10ADE1B71A327C51003B79A3 /* LiveServiceViewController_iPhone.m */; };
 		10ADE1C11A327C51003B79A3 /* LiveServiceViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10ADE1B81A327C51003B79A3 /* LiveServiceViewController_iPhone.xib */; };
 		10ADE1C21A327C51003B79A3 /* volvo_c70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10ADE1BA1A327C51003B79A3 /* volvo_c70.jpg */; };
-		85249BD025B6C27700162D64 /* LiveAuthDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85249BCF25B6C27700162D64 /* LiveAuthDialog.xib */; };
 		8579189825B57D6C00FAE1D1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8579189725B57D6C00FAE1D1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +107,6 @@
 		10ADE1B71A327C51003B79A3 /* LiveServiceViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveServiceViewController_iPhone.m; sourceTree = "<group>"; };
 		10ADE1B81A327C51003B79A3 /* LiveServiceViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveServiceViewController_iPhone.xib; sourceTree = "<group>"; };
 		10ADE1BA1A327C51003B79A3 /* volvo_c70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = volvo_c70.jpg; sourceTree = "<group>"; };
-		85249BCF25B6C27700162D64 /* LiveAuthDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveAuthDialog.xib; sourceTree = "<group>"; };
 		8579189725B57D6C00FAE1D1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -148,7 +146,6 @@
 				1070EEB81A5C6A3D00966311 /* Helpers */,
 				1070EECA1A5C6A3D00966311 /* LiveAuthDialog.h */,
 				1070EECB1A5C6A3D00966311 /* LiveAuthDialog.m */,
-				85249BCF25B6C27700162D64 /* LiveAuthDialog.xib */,
 				1070EECE1A5C6A3D00966311 /* LiveAuthDialogDelegate.h */,
 				1070EECF1A5C6A3D00966311 /* LiveAuthRefreshRequest.h */,
 				1070EED01A5C6A3D00966311 /* LiveAuthRefreshRequest.m */,
@@ -349,7 +346,6 @@
 				10ADE1BD1A327C51003B79A3 /* LiveServiceViewController_iPad.xib in Resources */,
 				10ADE1C11A327C51003B79A3 /* LiveServiceViewController_iPhone.xib in Resources */,
 				10ADE1C21A327C51003B79A3 /* volvo_c70.jpg in Resources */,
-				85249BD025B6C27700162D64 /* LiveAuthDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

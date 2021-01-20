@@ -24,6 +24,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import <Foundation/Foundation.h>
 
 #import "LiveConnectSession.h"
@@ -50,6 +51,10 @@
                                              scope:(NSArray *)scopes;
 
 + (void) clearAuthCookie;
+
++ (void) copyFromSharedCookiesToWebKitCookieStore:(WKHTTPCookieStore *)webKitCookieStore;
+
++ (void) copyToSharedCookiesFromWebKitCookieStore:(WKHTTPCookieStore *)webKitCookieStore;
 
 + (NSError *) createAuthError:(NSInteger)code
                          info:(NSDictionary *)info;

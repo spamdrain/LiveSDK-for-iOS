@@ -31,15 +31,13 @@
 
 @synthesize webView, canDismiss, delegate = _delegate;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil 
-               bundle:(NSBundle *)nibBundleOrNil
-             startUrl:(NSURL *)startUrl 
-               endUrl:(NSString *)endUrl
-             delegate:(id<LiveAuthDialogDelegate>)delegate
+- (id)initWithStartUrl:(NSURL *)startUrl
+                endUrl:(NSString *)endUrl
+              delegate:(id<LiveAuthDialogDelegate>)delegate
 {
-    self = [super initWithNibName:nibNameOrNil 
-                           bundle:nibBundleOrNil];
-    if (self) 
+    self = [super init];
+
+    if (self)
     {
         _startUrl = [startUrl retain];
         _endUrl =  [endUrl retain];
@@ -59,12 +57,25 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)loadView
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+    WKWebViewConfiguration *webViewConfiguration = [[[WKWebViewConfiguration alloc] init] autorelease];
+    webViewConfiguration.websiteDataStore = [[WKWebsiteDataStore nonPersistentDataStore] autorelease];
+    [LiveAuthHelper copyFromSharedCookiesToWebKitCookieStore:webViewConfiguration.websiteDataStore.httpCookieStore];
+
+    self.view = [[UIView alloc] init];
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:webViewConfiguration];
+    self.webView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.webView];
+    [self.webView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor].active = YES;
+    [self.webView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
+    [self.webView.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor].active = YES;
+    [self.webView.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor].active = YES;
 }
 
 #pragma mark - View lifecycle
@@ -76,10 +87,10 @@
     
     self.webView.navigationDelegate = self;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-                                             initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                             target:self
-                                             action:@selector(dismissView:)];
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                              target:self
+                                              action:@selector(dismissView:)] autorelease];
     
     //Load the Url request in the UIWebView.
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:_startUrl];
@@ -93,11 +104,13 @@
     canDismiss = YES;
 }
 
-- (void)viewDidUnload
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    // Copy cookies set by the web view to the shared NSHTTPCookieStorage so that they can be
+    // retrieved and cleared later on in LiveAuthHelper::clearAuthCookie when logging out.
+    [LiveAuthHelper copyToSharedCookiesFromWebKitCookieStore:webView.configuration.websiteDataStore.httpCookieStore];
+
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated

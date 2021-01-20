@@ -24,6 +24,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import "LiveAuthHelper.h"
 #import "LiveConstants.h"
 #import "LiveConnectSession.h"
@@ -209,7 +210,8 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
 {
     NSHTTPCookieStorage* cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     NSArray* liveCookies = [cookies cookiesForURL:[NSURL URLWithString:url]];
-    for (NSHTTPCookie* cookie in liveCookies) 
+    NSLog(@"LiveSDK: Clearing %ld cookies for the URL %@ from the shared NSHTTPCookieStorage", liveCookies.count, url);
+    for (NSHTTPCookie* cookie in liveCookies)
     {
         [cookies deleteCookie:cookie];
     }
@@ -228,6 +230,44 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
     {
         [LiveAuthHelper clearCookieForUrl: authUrl];
     }
+}
+
++ (void) copyFromSharedCookiesForUrl:(NSString *)url toWebKitCookieStore:(WKHTTPCookieStore *)webKitCookieStore
+{
+    NSHTTPCookieStorage* cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray* liveCookies = [cookies cookiesForURL:[NSURL URLWithString:url]];
+    NSLog(@"LiveSDK: Copying %ld cookies for the URL %@ from the shared NSHTTPCookieStorage to WebKit cookie store", liveCookies.count, url);
+    for (NSHTTPCookie* cookie in liveCookies)
+    {
+        [webKitCookieStore setCookie:cookie completionHandler:nil];
+    }
+}
+
++ (void) copyFromSharedCookiesToWebKitCookieStore:(WKHTTPCookieStore *)webKitCookieStore
+{
+    NSString *httpFormat =  @"http://%@";
+    NSString *httpsFormat =  @"https://%@";
+    NSMutableArray *authEndpoints = [NSMutableArray arrayWithObjects:
+                                     [NSString stringWithFormat: httpFormat, LIVE_ENDPOINT_LOGIN_HOST],
+                                     [NSString stringWithFormat: httpsFormat, LIVE_ENDPOINT_LOGIN_HOST],
+                                     nil];
+
+    for (NSString* authUrl in authEndpoints)
+    {
+        [LiveAuthHelper copyFromSharedCookiesForUrl: authUrl toWebKitCookieStore:webKitCookieStore];
+    }
+}
+
++ (void) copyToSharedCookiesFromWebKitCookieStore:(WKHTTPCookieStore *)webKitCookieStore
+{
+    [webKitCookieStore getAllCookies:^(NSArray<NSHTTPCookie *> * _Nonnull cookies) {
+        NSHTTPCookieStorage *sharedCookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        NSLog(@"LiveSDK: Copying %ld cookies from WebKit cookie store to the shared NSHTTPCookieStorage", cookies.count);
+        for (NSHTTPCookie *cookie in cookies)
+        {
+            [sharedCookies setCookie:cookie];
+        }
+    }];
 }
 
 + (BOOL) isSessionValid:(LiveConnectSession *)session
