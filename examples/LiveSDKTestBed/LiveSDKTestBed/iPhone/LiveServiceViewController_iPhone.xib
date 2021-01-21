@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveServiceViewController_iPhone">
@@ -19,179 +22,228 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4">
-                    <rect key="frame" x="9" y="45" width="70" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Sign in"/>
-                    <connections>
-                        <action selector="onClickSignInButton:" destination="-1" eventType="touchUpInside" id="6"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7">
-                    <rect key="frame" x="212" y="81" width="39" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Get"/>
-                    <connections>
-                        <action selector="onClickGetButton:" destination="-1" eventType="touchUpInside" id="38"/>
-                    </connections>
-                </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="11">
-                    <rect key="frame" x="12" y="311" width="296" height="159"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="13">
-                    <rect key="frame" x="196" y="180" width="110" height="98"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15">
-                    <rect key="frame" x="205" y="149" width="101" height="23"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Download"/>
-                    <connections>
-                        <action selector="onClickDownloadButton:" destination="-1" eventType="touchUpInside" id="48"/>
-                    </connections>
-                </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="me" borderStyle="roundedRect" minimumFontSize="17" id="17">
-                    <rect key="frame" x="49" y="78" width="160" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="19">
-                    <rect key="frame" x="116" y="149" width="77" height="23"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Upload"/>
-                    <connections>
-                        <action selector="onClickUploadButton:" destination="-1" eventType="touchUpInside" id="47"/>
-                    </connections>
-                </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Path" lineBreakMode="tailTruncation" minimumFontSize="10" id="21">
-                    <rect key="frame" x="12" y="83" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22">
-                    <rect key="frame" x="255" y="80" width="51" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Delete"/>
-                    <connections>
-                        <action selector="onClickDeleteButton:" destination="-1" eventType="touchUpInside" id="37"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="23">
-                    <rect key="frame" x="9" y="148" width="38" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Put"/>
-                    <connections>
-                        <action selector="onClickPutButton:" destination="-1" eventType="touchUpInside" id="45"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="24">
-                    <rect key="frame" x="49" y="148" width="41" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Post"/>
-                    <connections>
-                        <action selector="onClickPostButton:" destination="-1" eventType="touchUpInside" id="46"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="25">
-                    <rect key="frame" x="212" y="117" width="43" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Copy"/>
-                    <connections>
-                        <action selector="onClickCopyButton:" destination="-1" eventType="touchUpInside" id="42"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="26">
-                    <rect key="frame" x="261" y="117" width="45" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Move"/>
-                    <connections>
-                        <action selector="onClickMoveButton:" destination="-1" eventType="touchUpInside" id="43"/>
-                    </connections>
-                </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="27">
-                    <rect key="frame" x="49" y="113" width="160" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dest." lineBreakMode="tailTruncation" minimumFontSize="10" id="28">
-                    <rect key="frame" x="10" y="118" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="{ json body}" id="29">
-                    <rect key="frame" x="10" y="176" width="179" height="123"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="31">
-                    <rect key="frame" x="82" y="45" width="79" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Authorize"/>
-                    <connections>
-                        <action selector="onClickAuthorizeButton:" destination="-1" eventType="touchUpInside" id="41"/>
-                    </connections>
-                </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="wl.signin wl.basic wl.skydrive" borderStyle="roundedRect" minimumFontSize="17" id="32">
-                    <rect key="frame" x="164" y="42" width="142" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="49">
-                    <rect key="frame" x="196" y="280" width="110" height="23"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Clear output"/>
-                    <connections>
-                        <action selector="onClickClearOutputButton:" destination="-1" eventType="touchUpInside" id="50"/>
-                    </connections>
-                </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Live Services Test Bed" lineBreakMode="tailTruncation" minimumFontSize="10" id="51">
-                    <rect key="frame" x="72" y="18" width="174" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Live Services Test Bed" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="51">
+                    <rect key="frame" x="0.0" y="44" width="390" height="20.333333333333329"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" red="0.13414774060000001" green="0.51652056570000004" blue="0.54891304350000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.13414774060000001" green="0.51652056570000004" blue="0.54891304350000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="846-tY-aEA" userLabel="Stack View 1">
+                    <rect key="frame" x="0.0" y="64.333333333333329" width="390" height="34"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="34"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Sign in"/>
+                            <connections>
+                                <action selector="onClickSignInButton:" destination="-1" eventType="touchUpInside" id="6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31">
+                            <rect key="frame" x="44" y="0.0" width="58" height="34"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Authorize"/>
+                            <connections>
+                                <action selector="onClickAuthorizeButton:" destination="-1" eventType="touchUpInside" id="41"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="wl.signin wl.basic wl.skydrive" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32">
+                            <rect key="frame" x="105" y="0.0" width="285" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-Q2-FvC" userLabel="Stack View 2">
+                    <rect key="frame" x="0.0" y="98.333333333333329" width="390" height="33.999999999999986"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Path" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                            <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="me" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                            <rect key="frame" x="34.333333333333343" y="0.0" width="285.66666666666663" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                            <rect key="frame" x="320" y="0.0" width="30" height="34"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Get"/>
+                            <connections>
+                                <action selector="onClickGetButton:" destination="-1" eventType="touchUpInside" id="38"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                            <rect key="frame" x="350" y="0.0" width="40" height="34"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Delete"/>
+                            <connections>
+                                <action selector="onClickDeleteButton:" destination="-1" eventType="touchUpInside" id="37"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yWf-HP-MVp" userLabel="Stack View 3">
+                    <rect key="frame" x="0.0" y="132.33333333333334" width="390" height="34"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dest." lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="28">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                            <rect key="frame" x="42" y="0.0" width="279" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25">
+                            <rect key="frame" x="323" y="0.0" width="32" height="34"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Copy"/>
+                            <connections>
+                                <action selector="onClickCopyButton:" destination="-1" eventType="touchUpInside" id="42"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                            <rect key="frame" x="357" y="0.0" width="33" height="34"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Move"/>
+                            <connections>
+                                <action selector="onClickMoveButton:" destination="-1" eventType="touchUpInside" id="43"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="t1D-na-ABx" userLabel="Stack View 4">
+                    <rect key="frame" x="0.0" y="166.33333333333334" width="390" height="28"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="28"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Put"/>
+                            <connections>
+                                <action selector="onClickPutButton:" destination="-1" eventType="touchUpInside" id="45"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24">
+                            <rect key="frame" x="100.66666666666669" y="0.0" width="88" height="28"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Post"/>
+                            <connections>
+                                <action selector="onClickPostButton:" destination="-1" eventType="touchUpInside" id="46"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19">
+                            <rect key="frame" x="201.66666666666666" y="0.0" width="87.666666666666657" height="28"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Upload"/>
+                            <connections>
+                                <action selector="onClickUploadButton:" destination="-1" eventType="touchUpInside" id="47"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15">
+                            <rect key="frame" x="302.33333333333331" y="0.0" width="87.666666666666686" height="28"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Download"/>
+                            <connections>
+                                <action selector="onClickDownloadButton:" destination="-1" eventType="touchUpInside" id="48"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-8L-AbO" userLabel="Stack View 5">
+                    <rect key="frame" x="0.0" y="194.33333333333337" width="390" height="128"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="{ json body}" translatesAutoresizingMaskIntoConstraints="NO" id="29">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="128"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-Vw-2iJ">
+                            <rect key="frame" x="280" y="0.0" width="110" height="128"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="98"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49">
+                                    <rect key="frame" x="0.0" y="99.999999999999972" width="110" height="28"/>
+                                    <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Clear output"/>
+                                    <connections>
+                                        <action selector="onClickClearOutputButton:" destination="-1" eventType="touchUpInside" id="50"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="q2R-Vw-2iJ" secondAttribute="trailing" id="9GC-xG-n7V"/>
+                        <constraint firstAttribute="height" secondItem="q2R-Vw-2iJ" secondAttribute="height" id="K60-qL-Qv7"/>
+                        <constraint firstItem="q2R-Vw-2iJ" firstAttribute="top" secondItem="n5n-8L-AbO" secondAttribute="top" id="R50-Rw-k66"/>
+                        <constraint firstAttribute="bottom" secondItem="q2R-Vw-2iJ" secondAttribute="bottom" id="t7T-iB-SvC"/>
+                    </constraints>
+                </stackView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="0.0" y="322.33333333333326" width="390" height="487.66666666666674"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Pcj-Lc-6ve"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="51" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="0f2-Gh-JYi"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="11" secondAttribute="trailing" id="0qv-So-cZy"/>
+                <constraint firstItem="vfs-Q2-FvC" firstAttribute="top" secondItem="846-tY-aEA" secondAttribute="bottom" id="2LR-Mj-8bp"/>
+                <constraint firstItem="11" firstAttribute="top" secondItem="n5n-8L-AbO" secondAttribute="bottom" id="6nV-J0-QiK"/>
+                <constraint firstItem="n5n-8L-AbO" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="DEK-oF-7ea"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="yWf-HP-MVp" secondAttribute="trailing" id="Fl2-rz-LHO"/>
+                <constraint firstItem="yWf-HP-MVp" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="Ixe-vj-mKT"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="846-tY-aEA" secondAttribute="trailing" id="OWP-UH-389"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="top" secondItem="51" secondAttribute="top" id="SuA-ik-juQ"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="51" secondAttribute="trailing" id="T4r-mL-xRA"/>
+                <constraint firstItem="t1D-na-ABx" firstAttribute="top" secondItem="yWf-HP-MVp" secondAttribute="bottom" id="Vli-UO-Ga0"/>
+                <constraint firstItem="vfs-Q2-FvC" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="WR3-UP-aso"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="vfs-Q2-FvC" secondAttribute="trailing" id="YeW-D3-V4b"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="t1D-na-ABx" secondAttribute="trailing" id="Yfi-RJ-WUB"/>
+                <constraint firstItem="846-tY-aEA" firstAttribute="top" secondItem="51" secondAttribute="bottom" id="Zlg-mn-tmw"/>
+                <constraint firstItem="n5n-8L-AbO" firstAttribute="top" secondItem="t1D-na-ABx" secondAttribute="bottom" id="clt-4g-qWr"/>
+                <constraint firstItem="yWf-HP-MVp" firstAttribute="top" secondItem="vfs-Q2-FvC" secondAttribute="bottom" id="d6g-UO-0AE"/>
+                <constraint firstItem="846-tY-aEA" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="ehf-RQ-ldt"/>
+                <constraint firstItem="t1D-na-ABx" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="ew5-0I-pnJ"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="trailing" secondItem="n5n-8L-AbO" secondAttribute="trailing" id="g4P-6m-TfY"/>
+                <constraint firstItem="Pcj-Lc-6ve" firstAttribute="bottom" secondItem="11" secondAttribute="bottom" id="g4y-Xr-VfR"/>
+                <constraint firstItem="11" firstAttribute="leading" secondItem="Pcj-Lc-6ve" secondAttribute="leading" id="knY-0i-ejN"/>
+            </constraints>
+            <point key="canvasLocation" x="-57" y="131"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
